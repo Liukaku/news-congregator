@@ -1,43 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html>
+<head>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <title>News Site</title>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+
+    <link rel="stylesheet" href="css/newStyling.css">
+    <link rel="stylesheet" href="css/options.css">
+    <link rel="stylesheet" href="css/darkModeColours.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+<body onload="isItDarkOut()" id="bodyCol">
+
+    <nav id="overlay" class="overlay display-block">
+        <p class="undoBtn" id="undoBtn" onclick="undoFunc()"> &#8617; </p>
+        <img src="images/power.png" class="close-btn" id="close-menu" alt="">
+      
+        <ul>
+            <li>
+                <a href="#" id="optionsObject0" onclick="menuUpdateArt()">art</a>
+                <span>interesting art</span>
+            </li>
+            <li>
+                <a href="#" id="optionsObject1" onclick="menuUpdateWeb()">Web Design</a>
+                <span>design inspiration</span>
+            </li>
+            <li>
+                <a href="#" id="optionsObject2" onclick="menuUpdate()">Anime</a>
+                <span>anime...</span>
+            </li>
+            <li>
+                <a href="#" id="optionsObject3" onclick="menuUpdate()">Memes</a>
+                <span>Some memes i guess</span>
+            </li>
+        </ul>
+        
+      </nav>
+
+<div class="Logo">
+  <img id="headerIMG" src="https://i.ibb.co/BygrPVd/New-Project.png" alt="Logo Image" height="150" width="600">
+</div>
+
+
+<nav class="navigation">
+  <hr id="articHR1">
+  <ul id="navList" class="nav">
+  <div class="centred">
+    <li ><a id="navLinks1" href="">Technology</a></li>
+    <li id="navLinks2" >Science</li>
+    <li><a id="navLinks3" href="">Gaming</a></li>
+    <li><a id="navLinks4" href="">Art</a></li>
+    <li><a id="navLinks5" href="">Food</a></li>
+    <img src="images/menu.png" class="menu-btn" id="open-menu" alt="">
+    </div>
+
+  </ul>
+ <hr id="articHR2">
+</nav>
+
+<div id="mailingList">
+  <span class="closebtn" id="closebtn" onclick="hideMailing()">&times;</span>
+  <p>
+  Sign up for our mailing list today
+  </p>
+  <br>
+
+  <!-- Button to open the modal -->
+<button  class="signUpButton" onclick="document.getElementById('id01').style.display='block'">Okay</button>
+
+
+
+</div>
+
+
+
+<!-- The Modal (contains the Sign Up form) -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+  <div class="container">
+    <h1>Mailing List Sign Up</h1>
+    <p>Please enter your email address you wish to be contacted on</p>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <p>By registering for our mailing list you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="">Cancel</button>
+        <button type="submit" class="signup"  onclick="document.getElementById('id01').style.display='none'">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<section class="frontPage" id="frontPage" style="">
+ <div id="root"></div>
+	
+</section>
+
+
+<section>
+  <div class="container">
+    <button id="darkButton" type="button" onclick="darkMode()">Dark Mode</button>
+  </div>
+</section>
+
+
+
+  <script src="js/api.js"></script>
+  <script src="js/JStest.js">  </script>
+  <script src="js/lazyloading.js">  </script>
+
+
+
+</script>
+
+</body>
 </html>

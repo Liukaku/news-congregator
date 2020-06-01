@@ -1,13 +1,215 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+a {
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  font-family: "Century Gothic";
+}
+
+.smallText{
+  font-family: "Century Gothic";
+}
+
+img {
+  filter: grayscale(0.4);
+}
+
+.flexContainer{
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
+.indiArticle{
+  max-width: 50vw;
+  width: 22vw;
+  min-width: 300px;
+  background-color: #ffffff;
+  margin: 15px 1.5vw 15px 0;
+  transition: 0.3s;
+}
+
+.indiArticle:hover{
+  box-shadow: -1px 2px 20px 2px rgb(128, 128, 128);
+  border-radius: 2px;
+  transition: 0.3s;
+  -ms-transform: translate(0px, -10px) ;
+  transform: translate(0px, -10px);
+}
+
+.indiArticle img{
+  max-width: 50vw;
+  max-height: 50vh;
+  object-fit: cover;
+  object-fit: 72%;
+  min-width: 300px;
+  height: 303px;
+  width: 22vw;
+}
+
+.articleThin{
+  max-width: 50vw;
+  width: 15vw;
+  min-width: 300px;
+  background-color: #ffffff;
+  margin: 15px 1.5vw 15px 0;
+  transition: 0.3s;
+}
+
+.articleThin:hover{
+  box-shadow: -1px 2px 20px 2px rgb(128, 128, 128);
+  border-radius: 2px;
+  transition: 0.3s;
+  -ms-transform: translate(0px, -10px) ;
+  transform: translate(0px, -10px);
+}
+
+.articleThin img{
+  max-width: 50vw;
+  max-height: 50vh;
+  object-fit: cover;
+  object-fit: 72%;
+  min-width: 300px;
+  height: 303px;
+  width: 15vw;
+}
+
+.articleWide{
+  max-width: 50vw;
+  width: 29vw;
+  min-width: 300px;
+  background-color: #ffffff;
+  margin: 15px 1.5vw 15px 0;
+  transition: 0.3s;
+}
+
+.articleWide:hover{
+  box-shadow: -1px 2px 20px 2px rgb(128, 128, 128);
+  border-radius: 2px;
+  transition: 0.3s;
+  -ms-transform: translate(0px, -10px) ;
+  transform: translate(0px, -10px);
+}
+
+.articleWide img{
+  max-width: 50vw;
+  max-height: 50vh;
+  object-fit: cover;
+  object-fit: 72%;
+  min-width: 300px;
+  height: 303px;
+  width: 29vw;
+}
+
+/*dont forget to change the parameters on the left AND right */
+
+.doublingUp hr{
+}
+
+.articleDoubleUpLeft{
+  max-width: 50vw;
+  width: 22vw;
+  min-width: 300px;
+  height: 205px;
+  background-color: #ffffff;
+  margin: 15px 1.5vw 15px 0;
+  transition: 0.3s;
+}
+
+.articleDoubleUpLeft:hover{
+  box-shadow: -1px 2px 20px 2px rgb(128, 128, 128);
+  border-radius: 2px;
+  transition: 0.3s;
+  -ms-transform: translate(0px, -10px) ;
+  transform: translate(0px, -10px);
+}
+
+.articleDoubleUpLeft .h3{
+  font-size: .9em;
+  max-width: 50%;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.articleDoubleUpLeft div{
+  max-width: 50%;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-top: 25px !important;
+}
+
+.articleDoubleUpLeft img{
+  max-width: 190px;
+  max-height: 170px;
+  object-fit: cover;
+  object-fit: 72%;
+  min-width: 133px;
+  min-height: 133px;
+  height: 10.5vw;
+  width: 10.5vw;
+  float: left;
+}
+
+.articleDoubleUpLeft div{
+  float: right;
+  margin: 40px 0 0 0 ;
+  font-size: 0.85em;
+}
+
+.articleDoubleUpLeft p{
+  font-size: 0.85em;
+}
+
+.articleDoubleUpRight{
+  max-width: 50vw;
+  width: 22vw;
+  min-width: 300px;
+  height: 205px;
+  background-color: #ffffff;
+  margin: 15px 1.5vw 15px 0;
+  transition: 0.3s;
+}
+
+.articleDoubleUpRight:hover{
+  box-shadow: -1px 2px 20px 2px rgb(128, 128, 128);
+  border-radius: 2px;
+  transition: 0.3s;
+  -ms-transform: translate(0px, -10px) ;
+  transform: translate(0px, -10px);
+}
+
+.articleDoubleUpRight .h3{
+  font-size: .9em;
+  max-width: 50%;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.articleDoubleUpRight div{
+  max-width: 50%;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-top: 25px !important;
+}
+
+.articleDoubleUpRight img{
+  max-width: 190px;
+  max-height: 170px;
+  object-fit: cover;
+  object-fit: 72%;
+  min-width: 133px;
+  min-height: 133px;
+  height: 10.5vw;
+  width: 10.5vw;
+  float: right;
+}
+
+.articleDoubleUpRight div{
+  float: left;
+  margin: 40px 0 0 0 ;
+  font-size: 0.85em;
+}
+
+.articleDoubleUpRight p{
+  font-size: 0.85em;
 }
