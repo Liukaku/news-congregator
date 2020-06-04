@@ -3,7 +3,6 @@ import "./index.css"
 
 
 const NewsPanel = props => {
-    console.log("boop");
         return(
             <div className={props.articleClass} id={props.articleID}>
                 <hr className="bigLine"/>
